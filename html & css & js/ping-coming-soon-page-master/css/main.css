@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+body {
+    font-family: "Libre Franklin", sans-serif;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.content h1{
+    margin-top: 20px;
+}
+.content h1 span {
+    color: #888;
+}
+.content form{
+    margin: 20px 0 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+form label {
+    position: absolute;
+    left: 23%;
+    bottom: -15px;
+    font-style: italic;
+    font-size: 13px;
+    color: hsl(354, 100%, 66%);
+    display: none;
+}
+
+form input:nth-of-type(1){
+    width: 40%;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+}
+form input:nth-of-type(2){
+    width: 15%;
+    height: 44px;
+    border-radius: 20px;
+    border: none;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    cursor: pointer;
+}
+.content img {
+    max-width: 70%;
+}
+.p2{
+    color: #888;
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.social a{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.social a:hover{
+    background-color: hsl(223, 87%, 63%);
+}
+.social a:hover i{
+    color: white;
+}
+
+@media (max-width : 375px) {
+    form {
+        flex-direction: column;
+        gap: 25px;
+    }
+    form input:nth-of-type(1) ,
+    form input:nth-of-type(2){
+        width: 100%;
+    }
+    form label {
+    position: absolute;
+    left: 0%;
+    bottom: 54px;
+    }
+}

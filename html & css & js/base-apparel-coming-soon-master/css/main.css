@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.content{
+    display: flex;
+    width: 800px;
+    margin: 20px auto;
+    height: 433px;
+    background-color: bisque;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.part1 {
+    padding: 20px 40px;
+}
+.part1 , .part2 {
+    width: 50%;
+}
+.p1{
+    margin: 10px 0;
+}
+.p2{
+    margin: 20px 0;
+    letter-spacing: 10px;
+    font-size: 33px;
+    font-weight: bold;
+}
+.p3{
+    line-height: 1.8;
+    color: #888;
+}
+.p4{
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+}
+.p4 .err_message{
+    position: absolute;
+    text-transform: capitalize;
+    bottom: -21px;
+    left: 16px;
+    color: red;
+    display: none;
+}
+.p4 input{
+    width: 90%;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid #ddd;
+    height: 50px;
+    padding-left: 10px;
+}
+.p4 button{
+    height: 52px;
+    width: 25%;
+    background-color: #ef9b99;
+    border: none;
+    border-radius: 25px;
+    margin-left: -55px;
+    cursor: pointer;
+    transition: .3s;
+}
+.p4 button:hover {
+    box-shadow: 0px 1px 8px -1px black;
+}
+.p4 > svg {
+    position: absolute;
+    right: 100px;
+    top: 13px;
+    display: none;
+}
+.part2 img {
+    width: 100%;
+}
