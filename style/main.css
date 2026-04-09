@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container{
+    height: 100vh;
+    padding: 10px;
+}
+.container h2{
+    margin: 10px auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+ul li{
+    height: 60px;
+    width: 200px;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 200px;
+    padding: 10px;
+    background-color: #b9bbc4;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+}
