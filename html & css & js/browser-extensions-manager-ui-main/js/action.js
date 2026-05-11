@@ -1,6 +1,6 @@
 let alldata ;
 let  loaddata = async()=>{
-    let data = await fetch("../data.json")
+    let data = await fetch("data.json")
     .then(req => req.json())
     .then(req => alldata=req)
 }
