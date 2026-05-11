@@ -1,0 +1,203 @@
+/* .attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Notesans'; 
+    src: url('../assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+@media (max-width:991px) {
+    .container{
+        width: 90%;
+    }
+}
+@media (max-width:767px) {
+    .container{
+        width: 95%;
+    }
+}
+@media (max-width:375px) {
+    .container{
+        width: 100%;
+    }
+}
+
+body{
+    font-family: "Notesans";
+    background-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    text-align: center;
+}
+body.dark{
+    background-image: linear-gradient(180deg, #040918 0%, #091540 100%);
+    color: white;
+}
+header{
+    background-color: hsl(200, 60%, 99%);
+    margin: 50px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header .theme button{
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: hsl(217, 61%, 90%);
+    cursor: pointer;
+}
+header .theme button:hover{
+    background-color: hsl(0, 0%, 78%);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+@media (max-width:767px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+body nav h1{
+    color :hsl(227, 75%, 14%);
+}
+body.dark nav h1{
+    color :white;
+}
+.links{
+    display: flex;
+    gap: 10px;
+}
+nav .links button{
+    font-size: 18px;
+    padding: 10px 25px;
+    border: none;
+    background: white;
+    border-radius: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+nav .links button:hover,
+nav .links button.active{
+    background-color: hsl(3, 71%, 56%);
+    color: white;
+}
+
+.root{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 15px;
+    margin-bottom: 50px;
+}
+body .root .box{
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 17px -10px black;
+}
+body.dark .root .box{
+    background-color: #1f2535;
+}
+
+.box .part1 ,
+.box .part2 {
+    display: flex;
+}
+
+.box .part1{
+    display: flex;
+    gap: 15px;
+}
+.box .part1 .info{
+    text-align: start;
+}
+.box .part1 img{
+    width: 60px;
+    align-self: flex-start;
+}
+.box .part1 p{
+    color: #888;
+    margin-top: 5px;
+}
+.box .part2{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .part2 button{
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 9px;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: .3s;
+    color: hsl(225, 23%, 24%);
+    cursor: pointer;
+}
+.box .part2 button:hover{
+    background-color: hsl(3, 77%, 44%);
+    color: white;
+}
+
+body.dark .box .part2 button{
+    color: white;
+}
+body.dark .box .part2 button:hover{
+    color: hsl(225, 23%, 24%);
+}
+
+.part2 > span {
+    width: 50px;
+    height: 26px;
+    background-color: gray;
+    border-radius: 15px;
+    position: relative;
+    transition: .3s;
+}
+.part2 > span.active{
+    background-color: hsl(3, 71%, 56%);
+}
+
+.part2 span span{
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 15px;
+    position: absolute;
+    background-color: white;
+    /* left: calc(60% - 3px); */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+}
